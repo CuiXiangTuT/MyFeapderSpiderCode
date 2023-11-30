@@ -1,0 +1,24 @@
+﻿CREATE TABLE `api_youtube_artist_channel_id_batch_data` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `crawl_condition_youtube_artist_channel_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '抓取条件的Youtube艺人频道id',
+  `crawl_result_youtube_artist_channel_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '实际结果的Youtube艺人频道id',
+  `youtube_playlist_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT 'Youtube艺人播放列表',
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT 'Youtube播放列表名称',
+  `publish_date` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT 'Youtube播放列表创建时间',
+  `gtime` datetime DEFAULT CURRENT_TIMESTAMP,
+  `batch` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE KEY `IX_channel_id_play_list_id` (`crawl_condition_youtube_artist_channel_id`,`youtube_playlist_id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=1066 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+kkkkkkkk
+
+CREATE TABLE `api_youtube_artist_channel_id_batch_task` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `youtube_artist_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT 'youtube艺人名',
+  `youtube_artist_channel_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT 'youtube艺人频道id',
+  `parser_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT 'YoutubeArtistChannelIDParser',
+  `state` int DEFAULT '0',
+  `gtime` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '插入时间',
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE KEY `IX_channel_id` (`youtube_artist_channel_id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
