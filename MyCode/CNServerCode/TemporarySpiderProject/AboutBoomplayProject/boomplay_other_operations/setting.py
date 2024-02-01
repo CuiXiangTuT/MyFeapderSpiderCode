@@ -1,0 +1,29 @@
+# 本地服务器：192.168.10.133
+MYSQL_IP = "192.168.10.133"
+MYSQL_PORT = 3306
+MYSQL_DB = "my_music_data"
+MYSQL_USER_NAME = "root"
+MYSQL_USER_PASS = "123456"
+
+# 香港服务器配置：8.218.99.123
+HK_MYSQL_IP = "8.218.99.123"
+HK_MYSQL_PORT = 3306
+HK_MYSQL_DB = "temporary_data"
+HK_MYSQL_USER_NAME = "crawler"
+HK_MYSQL_USER_PASS = "crawler.mysql"
+
+
+# 北京服务器配置：122.115.36.92
+BJ_MYSQL_IP = "122.115.36.92"
+BJ_MYSQL_PORT = 3306
+BJ_MYSQL_DB = "temporary_boomplay_data"
+BJ_MYSQL_USER_NAME = "crawler"
+BJ_MYSQL_USER_PASS = "MYSQL.crawler1"
+
+
+# # 临时北京服务器配置：122.115.36.92
+# TEMPORARY_BJ_MYSQL_IP = "122.115.36.92"
+# TEMPORARY_BJ_MYSQL_PORT = 3306
+# TEMPORARY_BJ_MYSQL_DB = "catalog_market_share_indonesia"
+# TEMPORARY_BJ_MYSQL_USER_NAME = "crawler"
+# TEMPORARY_BJ_MYSQL_USER_PASS = "MYSQL.crawler1"
