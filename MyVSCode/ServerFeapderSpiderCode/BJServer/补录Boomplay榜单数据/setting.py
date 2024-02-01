@@ -1,8 +1,0 @@
-﻿# 北京服务器配置：122.115.36.92 数据库：music_data
-BJ_MYSQL_IP = "122.115.36.92"
-BJ_MYSQL_PORT = 3306
-BJ_MYSQL_DB_BJ = "music_data"
-BJ_MYSQL_USER_NAME = "root"
-BJ_MYSQL_USER_PASS = "123456"
-
-
